@@ -1,6 +1,8 @@
 function App() {
   return (
-    <div>Hello World</div>
+    <>
+    {window.fpiIndicators.map((indicator) => <div key={indicator.id}>{indicator.name}</div>)}
+    </>
   );
 }
 
