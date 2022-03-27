@@ -15,7 +15,7 @@ const scaleColor = value =>  {
 
 function Indicator({ community, ecological, economic, name }) {
   return (
-    <>
+    <div className={styles.root} >
       <div><b>{name}</b></div>
       <div className={styles.indicator}>
         <div className={styles.indicator__title}>Ecological</div>
@@ -47,7 +47,7 @@ function Indicator({ community, ecological, economic, name }) {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

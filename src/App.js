@@ -1,6 +1,7 @@
 import { useCallback, useState } from 'react';
 import Indicator from './Indicator';
 import "./App.css";
+import styles from './App.module.css';
 
 const sortNameAsc = (a, b) => {
   const nameA = a.name.toUpperCase();
@@ -115,25 +116,40 @@ function App() {
   );
 
   return (
-    <>
-    <div>
-      <button onClick={handleSortNameClick}>Sort Name</button>
-      <button onClick={handleSortCommunityClick}>Sort Community</button>
-      <button onClick={handleSortEcologicalClick}>Sort Ecological</button>
-      <button onClick={handleSortEconomicClick}>Sort Economic</button>
+    <div className={styles.root}>
+      <div className={styles.root__title}>FPI Listing</div>
+      <div className={styles.root__controls}>
+        <span onClick={handleSortNameClick} className={styles.root__controls__button}>
+          Name
+          {column === 'name' && ascending && <div className={styles.arrowUp}></div>}
+          {column === 'name' && !ascending && <div className={styles.arrowDown}></div>}
+        </span>
+        <span onClick={handleSortCommunityClick} className={styles.root__controls__button}>
+          Community
+          {column === 'community' && ascending && <div className={styles.arrowUp}></div>}
+          {column === 'community' && !ascending && <div className={styles.arrowDown}></div>}
+        </span>
+        <span onClick={handleSortEcologicalClick} className={styles.root__controls__button}>
+          Ecological
+          {column === 'ecological' && ascending && <div className={styles.arrowUp}></div>}
+          {column === 'ecological' && !ascending && <div className={styles.arrowDown}></div>}
+        </span>
+        <span onClick={handleSortEconomicClick} className={styles.root__controls__button}>
+          Economic
+          {column === 'economic' && ascending && <div className={styles.arrowUp}></div>}
+          {column === 'economic' && !ascending && <div className={styles.arrowDown}></div>}
+        </span>
+      </div>
+      {indicators.map((indicator) => (
+        <Indicator
+          community={indicator.community}
+          ecological={indicator.ecological}
+          economic={indicator.economic}
+          key={indicator.id}
+          name={indicator.name}
+        />
+      ))}
     </div>
-    <div>{ascending ? 'ASCENDING' : 'DESCENDING'}</div>
-    <div>{column}</div>
-    {indicators.map((indicator) => (
-      <Indicator
-        community={indicator.community}
-        ecological={indicator.ecological}
-        economic={indicator.economic}
-        key={indicator.id}
-        name={indicator.name}
-      />
-    ))}
-    </>
   );
 }
 

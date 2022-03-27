@@ -1,8 +1,11 @@
+.root {
+   margin-top: 24px;
+}
 .indicator {
    display: -webkit-flex;
    display: -ms-flexbox;
    display: flex;
-   margin-top: 20px;
+   margin-top: 12px;
  }
 
 .indicator__title {
@@ -10,7 +13,6 @@
   -webkit-flex: 0 0 100px;
   -ms-flex: 0 0 100px;
   flex: 0 0 100px;
-  font-weight: bold;
 }
 
 .indicator__value {

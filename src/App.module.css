@@ -1,0 +1,41 @@
+.root {
+  margin: 12px;
+}
+
+.root__title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.root__controls {
+  margin-top: 12px;
+}
+
+.root__controls__button {
+  align-items: center;
+  background-color: rgb(230, 230, 230);
+  border-radius: 6px;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  margin-left: 12px;
+  padding: 8px;
+  width: 150px;
+}
+
+.arrowUp {
+  width: 0; 
+  height: 0; 
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid gray;
+}
+
+.arrowDown {
+  width: 0; 
+  height: 0; 
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid gray;
+}
