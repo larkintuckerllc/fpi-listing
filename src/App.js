@@ -124,11 +124,6 @@ function App() {
           {column === 'name' && ascending && <div className={styles.arrowUp}></div>}
           {column === 'name' && !ascending && <div className={styles.arrowDown}></div>}
         </span>
-        <span onClick={handleSortCommunityClick} className={styles.root__controls__button}>
-          Community
-          {column === 'community' && ascending && <div className={styles.arrowUp}></div>}
-          {column === 'community' && !ascending && <div className={styles.arrowDown}></div>}
-        </span>
         <span onClick={handleSortEcologicalClick} className={styles.root__controls__button}>
           Ecological
           {column === 'ecological' && ascending && <div className={styles.arrowUp}></div>}
@@ -138,6 +133,11 @@ function App() {
           Economic
           {column === 'economic' && ascending && <div className={styles.arrowUp}></div>}
           {column === 'economic' && !ascending && <div className={styles.arrowDown}></div>}
+        </span>
+        <span onClick={handleSortCommunityClick} className={styles.root__controls__button}>
+          Community
+          {column === 'community' && ascending && <div className={styles.arrowUp}></div>}
+          {column === 'community' && !ascending && <div className={styles.arrowDown}></div>}
         </span>
       </div>
       {indicators.map((indicator) => (

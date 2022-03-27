@@ -52,7 +52,3 @@ function Indicator({ community, ecological, economic, link, name }) {
 }
 
 export default Indicator;
-
-/*
-
-*/
