@@ -1,0 +1,31 @@
+.indicator {
+   display: -webkit-flex;
+   display: -ms-flexbox;
+   display: flex;
+   margin-top: 20px;
+ }
+
+.indicator__title {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 100px;
+  -ms-flex: 0 0 100px;
+  flex: 0 0 100px;
+  font-weight: bold;
+}
+
+.indicator__value {
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 0px;
+  -ms-flex: 1 0 0px;
+  flex: 1 0 0px;
+  margin-left: 10px;
+  background-color: rgb(230, 230, 230);
+}
+
+.indicator__value__scale {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+}
