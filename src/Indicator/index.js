@@ -13,10 +13,10 @@ const scaleColor = value =>  {
   return '#00cc00';
 };
 
-function Indicator({ community, ecological, economic, name }) {
+function Indicator({ community, ecological, economic, link, name }) {
   return (
     <div className={styles.root} >
-      <div><b>{name}</b></div>
+      <div className={styles.title}><a href={link} target="_blank" rel="noreferrer">{name}</a></div>
       <div className={styles.indicator}>
         <div className={styles.indicator__title}>Ecological</div>
         <div className={styles.indicator__value}>

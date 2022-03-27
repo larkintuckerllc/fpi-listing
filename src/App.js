@@ -146,6 +146,7 @@ function App() {
           ecological={indicator.ecological}
           economic={indicator.economic}
           key={indicator.id}
+          link={indicator.link}
           name={indicator.name}
         />
       ))}

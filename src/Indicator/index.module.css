@@ -1,6 +1,9 @@
 .root {
    margin-top: 24px;
 }
+.title {
+  font-weight: bold;
+}
 .indicator {
    display: -webkit-flex;
    display: -ms-flexbox;
