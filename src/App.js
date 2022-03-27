@@ -1,5 +1,6 @@
 import { useCallback, useState } from 'react';
 import Indicator from './Indicator';
+import "./App.css";
 
 const sortNameAsc = (a, b) => {
   const nameA = a.name.toUpperCase();
